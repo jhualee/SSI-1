@@ -1,7 +1,9 @@
 package com.guobin.myweb;
 
+import com.guobin.myweb.service.LoginService;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,6 +15,9 @@ import java.io.UnsupportedEncodingException;
 public class UserAction extends ActionSupport {
 
     private static final long serialVersionUID = 1L;
+
+    @Autowired
+    LoginService loginService;
 
     public String execute(){
         return SUCCESS;
