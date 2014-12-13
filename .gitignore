@@ -1,0 +1,4 @@
+.idea/*
+.idea/artifacts/MyWeb_war_exploded.xml
+.idea/libraries/Struts_2_2_3_20.xml
+MyWeb/target
