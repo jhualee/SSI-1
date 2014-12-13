@@ -2,6 +2,7 @@ package com.guobin.myweb;
 
 import com.guobin.myweb.service.LoginService;
 import com.opensymphony.xwork2.ActionSupport;
+import lombok.Getter;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -19,12 +20,17 @@ public class UserAction extends ActionSupport {
     @Autowired
     LoginService loginService;
 
+    @Getter
+    private String username;
+
     public String execute(){
+        username = "123456";
         return SUCCESS;
     }
 
     public String login() {
         try {
+            username = "123456";
             HttpServletRequest request = ServletActionContext.getRequest();
             HttpServletResponse response = ServletActionContext.getResponse();
             request.setCharacterEncoding("UTF-8");
