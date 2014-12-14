@@ -1,8 +1,12 @@
 package com.guobin.myweb;
 
+import com.guobin.myweb.bean.UserBean;
+import com.guobin.myweb.dao.UserMapper;
+import com.guobin.myweb.service.FooService;
 import com.guobin.myweb.service.LoginService;
 import com.opensymphony.xwork2.ActionSupport;
 import lombok.Getter;
+import org.apache.ibatis.annotations.Param;
 import org.apache.struts2.ServletActionContext;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -19,6 +23,9 @@ public class UserAction extends ActionSupport {
 
     @Autowired
     LoginService loginService;
+
+    @Autowired
+    FooService fooService;
 
     @Getter
     private String username;
